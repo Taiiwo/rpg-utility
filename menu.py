@@ -1,4 +1,4 @@
-# a class to make easier menus
+# a class to make easier menus, a bunch of options are kinda weird though, will fix in the future
 from os import system, name
 
 class Menu:
