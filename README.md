@@ -1,2 +1,2 @@
 # rpg-utility
-useful stuff for text rpgs
+useful stuff for my text rpg
