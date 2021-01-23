@@ -165,6 +165,51 @@ class Location:
 		return quadrant
 		
 
+if __name__ == '__main__':
+	class Player:
+		def __init__(self):
+			self.env_list = [] # should contain a list of Environment objects with a name attribute, needed to print surroundings
+			self.coords = Location(self.env_list,1234)
+		
+		def movement_handler(self): # an example function to show how the code works, based on the Menu class from menu.py
+			coords = self.coords
+
+			def move_sequence(direction):
+				direction = direction[0]
+				coords.move(direction)
+
+
+			def back():
+				return 'stop'
+
+			def display_surroundings():
+				coords.display()
+				print('-'*90)
+				print()
+				coords.surroundings(4)
+
+			def enter():
+				stop = coords.generate().enter(self)
+				return ['return',stop]
+
+			a = Menu({
+						'title':'MOVE',
+						'options':{
+									'enter':[enter,'x'],
+									'up':[move_sequence,('up',None),'w'],
+									'down':[move_sequence,('down',None),'s'],
+									'right':[move_sequence,('right',None),'d'],
+									'left':[move_sequence,('left',None),'a'],
+
+									},
+						'repeat':display_surroundings
+										})
+
+			val = a.runMenu(end=False)
+			try:
+				return val[0]
+			except TypeError:
+				return val
 
 
 
