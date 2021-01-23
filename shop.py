@@ -1,5 +1,5 @@
 # a class for making simple shops for my text rpg, under testing.
-from menu.py import Menu   
+from menu import Menu   
 
 class Shop:
 	def __init__(self, name=None, items={}, maxitems=5, tagline=None,main_options={}):
