@@ -1,3 +1,5 @@
+# a clock to simulate in game time in a text rpg
+
 import colorama
 from colorama import Fore, Back, Style
 colorama.init()
