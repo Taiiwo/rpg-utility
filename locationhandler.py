@@ -1,4 +1,4 @@
-# used to generate random terrain and print the environment around the player of a certain radius
+# used to generate random terrain and print the environment around the player of a certain radius using a seed value
 import random
 
 class Location:
