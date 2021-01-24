@@ -1,10 +1,5 @@
 # a clock to simulate in game time in a text rpg
 
-import colorama
-from colorama import Fore, Back, Style
-colorama.init()
-
-
 class Clock:
 	def __init__(self,time=0,tickrate=1,day=1,dayrate=20,timesofday=['morning','afternoon','evening','night'],numday=0):
 		self.totaltime = time
